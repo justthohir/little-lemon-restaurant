@@ -5,7 +5,7 @@ import Logo from "../assets/Logo.svg"
 const Header = () => {
   return (
     <header>
-      <img src={Logo} />
+      <img src={Logo} alt="Logo Little Lemon" />
       <Nav />
     </header>
   );
