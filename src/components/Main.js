@@ -4,7 +4,7 @@ const Main = () => {
   return (
     <>
       <main>
-        <h1>Main</h1>
+        <h1 className="karla karla-sec-title color-sec-pink">Main</h1>
       </main>
     </>
   );

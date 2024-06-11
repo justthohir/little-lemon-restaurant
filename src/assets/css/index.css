@@ -1,0 +1,96 @@
+.markazi {
+  font-family: "Markazi Text", serif;
+  font-weight: 500;
+}
+
+.mkz-title {
+  font-size: 64pt;
+}
+
+.mkz-subtitle {
+  font-size: 40pt;
+}
+
+.karla {
+  font-family: "Karla", serif;
+}
+
+.karla-lead {
+  font-weight: 500;
+  font-size: 18pt;
+}
+
+.karla-sec-title {
+  font-weight: 800;
+  font-size: 20pt;
+}
+
+.karla-sec-category {
+  font-weight: 800;
+  font-size: 16pt;
+}
+
+.karla-card-title {
+  font-weight: 700;
+  font-size: 18pt;
+}
+
+.karla-highlight {
+  font-weight: 500;
+  font-size: 16pt;
+}
+
+.karla-p {
+  font-weight: 400;
+  font-size: 16pt;
+  line-height: 1.5;
+  max-width: 40em;
+}
+
+.bg-primary-green {
+  background-color: #495e57;
+}
+
+.bg-primary-yellow {
+  background-color: #f4ce14;
+}
+
+.color-primary-green {
+  color: #495e57;
+}
+
+.color-primary-yellow {
+  color: #f4ce14;
+}
+
+.bg-sec-pink {
+  background-color: #ee9972;
+}
+
+.bg-sec-cream {
+  background-color: #fbdabb;
+}
+
+.bg-sec-white {
+  background-color: #edefee;
+}
+
+.bg-sec-black {
+  background-color: #333333;
+}
+
+.color-sec-pink {
+  color: #ee9972;
+}
+
+.color-sec-cream {
+  color: #fbdabb;
+}
+
+.color-sec-white {
+  color: #edefee;
+}
+
+.color-sec-black {
+  color: #333333;
+}
