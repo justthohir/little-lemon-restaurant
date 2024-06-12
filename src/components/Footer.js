@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "../assets/images/Logo.svg";
-import Nav from "./Nav";
 
 const Footer = () => {
   return (
@@ -11,7 +10,26 @@ const Footer = () => {
 
       <div className="footer-container">
         <h3>Navigation</h3>
-        <Nav />
+        <ul>
+          <li>
+            <a href="Home">Home</a>
+          </li>
+          <li>
+            <a href="About">About</a>
+          </li>
+          <li>
+            <a href="Menu">Menu</a>
+          </li>
+          <li>
+            <a href="Reservations">Reservations</a>
+          </li>
+          <li>
+            <a href="order-online">Order Online</a>
+          </li>
+          <li>
+            <a href="login">Login</a>
+          </li>
+        </ul>
       </div>
 
       <div className="footer-container">

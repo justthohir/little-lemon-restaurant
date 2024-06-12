@@ -1,0 +1,26 @@
+.logo {
+	padding: 10px 0;
+	vertical-align: baseline;
+}
+
+.menu {
+	display: grid;
+	grid-template-columns: repeat(6, auto);
+	gap: 15px;
+	justify-content: start;
+}
+
+.menu-item {
+	list-style-type: none;
+	color: #333;
+	padding: 5px 10px;
+}
+
+.menu-item:hover {
+	background-color: #e9ecef;
+	border-radius: 5px;
+}
+
+.menu-item a {
+  text-decoration: none;
+}

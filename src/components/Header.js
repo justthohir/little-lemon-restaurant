@@ -4,9 +4,18 @@ import Logo from "../assets/images/Logo.svg";
 
 const Header = () => {
   return (
-    <header>
-      <img src={Logo} alt="Logo Little Lemon" />
-      <Nav />
+    <header className="container mt-1 mb-1">
+      <div className="row">
+        <div className="col-2"></div>
+
+        <div className="col-2 logo">
+          <img src={Logo} alt="Logo Little Lemon" />
+        </div>
+
+        <Nav classNav="col-6" />
+
+        <div className="col-2"></div>
+      </div>
     </header>
   );
 };
