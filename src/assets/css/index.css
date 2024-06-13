@@ -110,6 +110,15 @@ body {
   padding: 0 70px;
 }
 
+.container-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
 .row {
   display: contents;
 }
@@ -182,6 +191,14 @@ body {
 
 .mt-4 {
   margin-top: 4rem;
+}
+
+.mt-6 {
+  margin-top: 6rem;
+}
+
+.mt-7 {
+  margin-top: 7rem;
 }
 
 .mb-1 {

@@ -5,24 +5,24 @@ const Nav = (props) => {
     <nav className="col-6">
       <ul className="menu">
         <li className="menu-item">
-          <a href="Home" className="karla-sec-title color-sec-black fz-14">
+          <a href="Home" className="karla-sec-category color-sec-black">
             Home
           </a>
         </li>
         <li className="menu-item">
-          <a href="About" className="karla-sec-title color-sec-black fz-14">
+          <a href="About" className="karla-sec-category color-sec-black">
             About
           </a>
         </li>
         <li className="menu-item">
-          <a href="Menu" className="karla-sec-title color-sec-black fz-14">
+          <a href="Menu" className="karla-sec-category color-sec-black">
             Menu
           </a>
         </li>
         <li className="menu-item">
           <a
             href="Reservations"
-            className="karla-sec-title color-sec-black fz-14"
+            className="karla-sec-category color-sec-black"
           >
             Reservations
           </a>
@@ -30,13 +30,13 @@ const Nav = (props) => {
         <li className="menu-item">
           <a
             href="order-online"
-            className="karla-sec-title color-sec-black fz-14"
+            className="karla-sec-category color-sec-black"
           >
             Order Online
           </a>
         </li>
         <li className="menu-item">
-          <a href="login" className="karla-sec-title color-sec-black fz-14">
+          <a href="login" className="karla-sec-category color-sec-black">
             Login
           </a>
         </li>
