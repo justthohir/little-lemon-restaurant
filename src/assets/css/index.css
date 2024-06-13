@@ -2,49 +2,50 @@ body {
   margin: 0;
 }
 
-.markazi {
+.markazi-title {
   font-family: "Markazi Text", serif;
   font-weight: 500;
-}
-
-.mkz-title {
   font-size: 64pt;
 }
 
-.mkz-subtitle {
+.markazi-subtitle {
+  font-family: "Markazi Text", serif;
+  font-weight: 500;
   font-size: 40pt;
 }
 
-.karla {
-  font-family: "Karla", serif;
-}
-
 .karla-lead {
+  font-family: "Karla", serif;
   font-weight: 500;
   font-size: 18pt;
 }
 
 .karla-sec-title {
+  font-family: "Karla", serif;
   font-weight: 800;
   font-size: 20pt;
 }
 
 .karla-sec-category {
+  font-family: "Karla", serif;
   font-weight: 800;
   font-size: 16pt;
 }
 
 .karla-card-title {
+  font-family: "Karla", serif;
   font-weight: 700;
   font-size: 18pt;
 }
 
 .karla-highlight {
+  font-family: "Karla", serif;
   font-weight: 500;
   font-size: 16pt;
 }
 
 .karla-p {
+  font-family: "Karla", serif;
   font-weight: 400;
   font-size: 16pt;
   line-height: 1.5;
@@ -117,18 +118,42 @@ body {
   grid-column: span 1; /* Default to one column span */
 }
 
-.col-1 { grid-column: span 1; }
-.col-2 { grid-column: span 2; }
-.col-3 { grid-column: span 3; }
-.col-4 { grid-column: span 4; }
-.col-5 { grid-column: span 5; }
-.col-6 { grid-column: span 6; }
-.col-7 { grid-column: span 7; }
-.col-8 { grid-column: span 8; }
-.col-9 { grid-column: span 9; }
-.col-10 { grid-column: span 10; }
-.col-11 { grid-column: span 11; }
-.col-12 { grid-column: span 12; }
+.col-1 {
+  grid-column: span 1;
+}
+.col-2 {
+  grid-column: span 2;
+}
+.col-3 {
+  grid-column: span 3;
+}
+.col-4 {
+  grid-column: span 4;
+}
+.col-5 {
+  grid-column: span 5;
+}
+.col-6 {
+  grid-column: span 6;
+}
+.col-7 {
+  grid-column: span 7;
+}
+.col-8 {
+  grid-column: span 8;
+}
+.col-9 {
+  grid-column: span 9;
+}
+.col-10 {
+  grid-column: span 10;
+}
+.col-11 {
+  grid-column: span 11;
+}
+.col-12 {
+  grid-column: span 12;
+}
 
 /* Responsive behavior for columns */
 @media (max-width: 768px) {
@@ -137,8 +162,16 @@ body {
   }
 }
 
-
 /* margin class */
+.m-0 {
+  margin: 0;
+}
+
+.my-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mt-1 {
   margin-top: 1rem;
 }
@@ -158,5 +191,12 @@ body {
 
 .width-100 {
   width: 100%;
-  height: 406px;
+}
+
+.fz-14 {
+  font-size: 14pt !important;
+}
+
+.fz-16 {
+  font-size: 16pt !important;
 }

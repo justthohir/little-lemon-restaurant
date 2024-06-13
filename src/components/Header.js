@@ -4,7 +4,7 @@ import Logo from "../assets/images/Logo.svg";
 
 const Header = () => {
   return (
-    <header className="container mt-1 mb-1">
+    <header className="container my-2">
       <div className="row">
         <div className="col-2"></div>
 

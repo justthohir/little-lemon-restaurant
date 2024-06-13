@@ -1,26 +1,59 @@
 .logo {
-	padding: 10px 0;
-	vertical-align: baseline;
+  padding: 10px 0;
+  vertical-align: baseline;
 }
 
 .menu {
-	display: grid;
-	grid-template-columns: repeat(6, auto);
-	gap: 15px;
-	justify-content: start;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 15px;
+  justify-content: start;
 }
 
 .menu-item {
-	list-style-type: none;
-	color: #333;
-	padding: 5px 10px;
+  list-style-type: none;
+  padding: 5px 10px;
 }
 
 .menu-item:hover {
-	background-color: #e9ecef;
-	border-radius: 5px;
+  background-color: #edefee;
+  border-radius: 5px;
 }
 
 .menu-item a {
   text-decoration: none;
+}
+
+.hero {
+  padding: 2rem 0;
+  height: 21rem;
+}
+
+.hero-content > h2 {
+  margin-top: -1rem;
+}
+
+.hero-content > h4 {
+  margin-top: -2rem;
+}
+
+.hero-content > p {
+  margin: 1rem 0 2rem 0;
+}
+
+.hero-image {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  width: 80%;
+  height: 425px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
 }

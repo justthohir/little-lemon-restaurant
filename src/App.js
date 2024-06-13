@@ -10,7 +10,7 @@ function App() {
 
       <Main />
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
