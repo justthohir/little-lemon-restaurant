@@ -68,6 +68,10 @@ const Main = () => {
                   <div className="card-image">
                     <img src={salad} alt="Greek Salad Menu" />
                   </div>
+                  <div className="card-title">
+                    <h3>Greek Salad</h3>
+                    <h3>$12.99</h3>
+                  </div>
                 </div>
 
                 <div className="card col-1 bg-sec-white">

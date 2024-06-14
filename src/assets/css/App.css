@@ -128,3 +128,9 @@
 	border-radius: 1rem;
 	object-fit: cover;
 }
+
+.card-title {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 1.5rem;
+}
