@@ -5,6 +5,7 @@ import FoodImg from "../assets/images/food-hero.jpg";
 import bruchetta from "../assets/images/bruchetta.svg";
 import salad from "../assets/images/salad.jpg";
 import lemon from "../assets/images/lemon.jpg";
+import bike from "../assets/images/bike.png";
 
 const Main = () => {
   return (
@@ -43,18 +44,20 @@ const Main = () => {
           <div className="col-2"></div>
 
           <div className="col-4">
-            <h1 className="markazi-subtitle color-sec-black m-0">This weeks specials!</h1>
+            <h1 className="markazi-subtitle color-sec-black m-0">
+              This weeks specials!
+            </h1>
           </div>
 
           <div className="col-2"></div>
-          
+
           <div className="col-2 highlight-button">
             <Button
               text="Online Menu"
               className="btn-online-menu karla-sec-category fz-14 bg-primary-yellow"
             />
           </div>
-          
+
           <div className="col-2"></div>
         </div>
 
@@ -63,14 +66,28 @@ const Main = () => {
           <div className="col-8">
             <div className="container-card">
               <div className="row">
-
                 <div className="card col-1 bg-sec-white">
                   <div className="card-image">
                     <img src={salad} alt="Greek Salad Menu" />
                   </div>
                   <div className="card-title">
-                    <h3>Greek Salad</h3>
-                    <h3>$12.99</h3>
+                    <h3 className="markazi fw-600 fz-18 color-sec-black mt-1">
+                      Greek Salad
+                    </h3>
+                    <h3 className="karla-card-title fz-14 color-sec-pink mt-1">
+                      $12.99
+                    </h3>
+                  </div>
+                  <p className="karla-p fz-12">
+                    The famous greek salad of crispy lettuce, peppers, olives
+                    and our Chicago style feta cheese, garnished with crunchy
+                    garlic and rosemary croutons.
+                  </p>
+                  <div className="card-order">
+                    <h4 className="karla-card-title fz-12 color-sec-black">
+                      Order a delivery
+                    </h4>
+                    <img src={bike} alt="Delivery Bike" />
                   </div>
                 </div>
 
@@ -78,11 +95,51 @@ const Main = () => {
                   <div className="card-image">
                     <img src={bruchetta} alt="Bruchetta Menu" />
                   </div>
+
+                  <div className="card-title">
+                    <h3 className="markazi fw-600 fz-18 color-sec-black mt-1">
+                      Bruchetta
+                    </h3>
+                    <h3 className="karla-card-title fz-14 color-sec-pink mt-1">
+                      $12.99
+                    </h3>
+                  </div>
+                  <p className="karla-p fz-12">
+                    The famous greek salad of crispy lettuce, peppers, olives
+                    and our Chicago style feta cheese, garnished with crunchy
+                    garlic and rosemary croutons.
+                  </p>
+                  <div className="card-order">
+                    <h4 className="karla-card-title fz-12 color-sec-black">
+                      Order a delivery
+                    </h4>
+                    <img src={bike} alt="Delivery Bike" />
+                  </div>
                 </div>
-                
+
                 <div className="card col-1 bg-sec-white">
                   <div className="card-image">
                     <img src={lemon} alt="Lemon Dessert Menu" />
+                  </div>
+
+                  <div className="card-title">
+                    <h3 className="markazi fw-600 fz-18 color-sec-black mt-1">
+                      Lemon Dessert
+                    </h3>
+                    <h3 className="karla-card-title fz-14 color-sec-pink mt-1">
+                      $12.99
+                    </h3>
+                  </div>
+                  <p className="karla-p fz-12">
+                    The famous greek salad of crispy lettuce, peppers, olives
+                    and our Chicago style feta cheese, garnished with crunchy
+                    garlic and rosemary croutons.
+                  </p>
+                  <div className="card-order">
+                    <h4 className="karla-card-title fz-12 color-sec-black">
+                      Order a delivery
+                    </h4>
+                    <img src={bike} alt="Delivery Bike" />
                   </div>
                 </div>
               </div>

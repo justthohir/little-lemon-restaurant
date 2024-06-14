@@ -2,6 +2,11 @@ body {
   margin: 0;
 }
 
+.markazi {
+  font-family: "Markazi Text", serif;
+  font-weight: 500;
+}
+
 .markazi-title {
   font-family: "Markazi Text", serif;
   font-weight: 500;
@@ -210,10 +215,26 @@ body {
   width: 100%;
 }
 
+.fz-12 {
+  font-size: 12pt !important;
+}
+
 .fz-14 {
   font-size: 14pt !important;
 }
 
 .fz-16 {
   font-size: 16pt !important;
+}
+
+.fz-18 {
+  font-size: 18pt !important;
+}
+
+.fz-20 {
+  font-size: 20pt !important;
+}
+
+.fw-600 {
+  font-weight: 600 !important;
 }
