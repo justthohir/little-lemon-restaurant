@@ -108,12 +108,9 @@
 }
 
 .card {
-  margin-bottom: 100px;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
+  margin-bottom: 7rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .card-image {
@@ -138,13 +135,14 @@
 .card p {
   margin: -0.5rem 0;
   padding: 0rem 1.5rem;
+  height: 150px;
 }
 
 .card-order {
   display: flex;
   justify-content: start;
   vertical-align: middle;
-  margin: 1.5rem 0 1rem;
+  margin: 1rem 0;
   padding: 1rem 1.5rem;
 }
 
@@ -156,4 +154,52 @@
   margin: -2px 10px;
   width: 24px;
   height: 100%;
+}
+
+.testimoni {
+  height: unset;
+  padding: 5rem 0;
+}
+
+.tesmoni-title h1 {
+  max-width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+
+.testimoni-card {
+  border-radius: 1rem;
+}
+
+.testimoni-user {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.testimoni-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 5rem;
+  box-shadow: 0 0 0 0.5rem #495e57;
+}
+
+.testimoni-photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  object-fit: cover;
+}
+
+.testimoni-description {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 4rem 2rem 0 2rem;
+}
+
+.testimoni-rating img {
+  width: 8rem;
+  margin-top: -1.5rem;
 }
