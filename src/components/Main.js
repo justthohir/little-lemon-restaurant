@@ -10,6 +10,8 @@ import lemon from "../assets/images/lemon.jpg";
 import emily from "../assets/images/emily.jpg";
 import james from "../assets/images/james.jpg";
 import sophia from "../assets/images/sophia.webp";
+import chefTop from "../assets/images/chef-top.jpg";
+import chefBot from "../assets/images/chef-bot.jpg";
 
 const Main = () => {
   const menuList = [
@@ -156,6 +158,41 @@ const Main = () => {
             </div>
             <div className="col-2"></div>
           </div>
+        </div>
+      </div>
+
+      <div className="container about">
+        <div className="row">
+          <div className="col-2"></div>
+
+          <div className="col-4">
+            <h2 className="markazi-title color-primary-black m-0">
+              Little Lemon
+            </h2>
+            <h4 className="markazi-subtitle color-primary-black m-0">
+              Chicago
+            </h4>
+            <p className="about-description karla-p color-primary-black">
+              Welcome to Little Lemon, your local destination for authentic
+              Mediterranean cuisine. Nestled in the heart of the city, Little
+              Lemon offers a warm and inviting ambiance, perfect for both
+              intimate dinners and lively gatherings. Our menu features a
+              delightful array of fresh, flavorful dishes inspired by the
+              Mediterranean's rich culinary traditions, from succulent kebabs
+              and fresh seafood to vibrant salads and homemade hummus.
+            </p>
+          </div>
+
+          <div className="col-4 pl-2">
+            <div className="about-image-top">
+              <img src={chefTop} alt="Chef Top" className="about-img" />
+            </div>
+            <div className="about-image-bot">
+              <img src={chefBot} alt="Chef Bot" className="about-img" />
+            </div>
+          </div>
+
+          <div className="col-2"></div>
         </div>
       </div>
     </main>

@@ -224,6 +224,10 @@ body {
 .mb-2 {
   margin-bottom: 2rem;
 }
+
+.pl-2 {
+  padding-left: 2rem;
+}
 /* end margin class */
 
 .width-100 {

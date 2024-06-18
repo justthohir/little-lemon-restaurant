@@ -43,10 +43,7 @@
 }
 
 .hero-image {
-  display: flex;
   overflow: hidden;
-  justify-content: center;
-  align-items: center;
   float: right;
   width: 80%;
   height: 425px;
@@ -108,7 +105,7 @@
 }
 
 .card {
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
@@ -202,4 +199,34 @@
 .testimoni-rating img {
   width: 8rem;
   margin-top: -1.5rem;
+}
+
+.about {
+  padding: 5rem 0;
+}
+
+.about h4 {
+  margin-top: -1rem;
+}
+
+.about-image-top {
+  overflow: hidden;
+  float: right;
+  width: 65%;
+  height: 350px;
+}
+
+.about-image-bot {
+  overflow: hidden;
+  margin-top: -13rem;
+  float: left;
+  width: 65%;
+  height: 350px;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
 }
