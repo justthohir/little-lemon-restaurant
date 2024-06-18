@@ -3,7 +3,7 @@ import bike from "../assets/images/bike.png";
 
 const MenuCard = (props) => {
   return (
-    <div className="card col-1 bg-sec-white">
+    <div className="card col-1 col-sm-12 bg-sec-white">
       <div className="card-image">
         <img src={props.src} alt={props.alt} />
       </div>

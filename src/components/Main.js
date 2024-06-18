@@ -68,9 +68,9 @@ const Main = () => {
       <div className="hero width-100 bg-primary-green">
         <div className="container">
           <div className="row">
-            <div className="col-2"></div>
+            <div className="col-2 col-sm-1"></div>
 
-            <div className="hero-content col-4">
+            <div className="hero-content col-4 col-sm-10">
               <h2 className="markazi-title color-primary-yellow m-0">
                 Little Lemon
               </h2>
@@ -85,7 +85,7 @@ const Main = () => {
               />
             </div>
 
-            <div className="col-4">
+            <div className="col-4 sm-d-none">
               <div className="hero-image">
                 <img src={FoodImg} alt="Garlic Bread" />
               </div>
@@ -94,31 +94,29 @@ const Main = () => {
         </div>
       </div>
 
-      <div className="container highlight mt-7">
+      <div className="container highlight">
         <div className="row">
-          <div className="col-2"></div>
+          <div className="col-2 col-sm-1"></div>
 
-          <div className="col-4">
+          <div className="col-6 col-sm-10">
             <h1 className="markazi-subtitle color-sec-black m-0">
               This weeks specials!
             </h1>
           </div>
 
-          <div className="col-2"></div>
-
-          <div className="col-2 highlight-button">
+          <div className="col-2 highlight-button sm-d-none">
             <Button
               text="Online Menu"
               className="btn-online-menu karla-sec-category fz-14 bg-primary-yellow"
             />
           </div>
 
-          <div className="col-2"></div>
+          <div className="col-2 col-sm-1"></div>
         </div>
 
         <div className="row">
-          <div className="col-2"></div>
-          <div className="col-8">
+          <div className="col-2 col-sm-1"></div>
+          <div className="col-8 col-sm-10">
             <div className="container-card">
               <div className="row">
                 {menuList.map((menu, iMenu) => {
@@ -133,21 +131,21 @@ const Main = () => {
       <div className="hero testimoni bg-primary-green width-100">
         <div className="container">
           <div className="row">
-            <div className="col-2"></div>
-            <div className="col-8 tesmoni-title">
+            <div className="col-2 col-sm-1"></div>
+            <div className="col-8 col-sm-10 tesmoni-title">
               <h1 className="karla-p fz-16 m-0 color-sec-white">
                 Testimonials
               </h1>
-              <h1 className="markazi-subtitle m-0 color-primary-yellow">
+              <h1 className="markazi-subtitle m-0 color-primary-yellow testimoni-subtitle">
                 We Care About Our Customers Too
               </h1>
             </div>
-            <div className="col-2"></div>
+            <div className="col-2 col-sm-1  "></div>
           </div>
 
           <div className="row">
-            <div className="col-2"></div>
-            <div className="col-8">
+            <div className="col-2 col-sm-1"></div>
+            <div className="col-8 col-sm-10">
               <div className="container-card">
                 <div className="row">
                   {testimoniList.map((testimoni, iTesti) => {
@@ -156,16 +154,16 @@ const Main = () => {
                 </div>
               </div>
             </div>
-            <div className="col-2"></div>
+            <div className="col-2 col-sm-1"></div>
           </div>
         </div>
       </div>
 
       <div className="container about">
         <div className="row">
-          <div className="col-2"></div>
+          <div className="col-2 col-sm-1"></div>
 
-          <div className="col-4">
+          <div className="col-4 col-sm-10">
             <h2 className="markazi-title color-primary-black m-0">
               Little Lemon
             </h2>
@@ -183,7 +181,10 @@ const Main = () => {
             </p>
           </div>
 
-          <div className="col-4 pl-2">
+          <div className="col-sm-1 lg-d-none"></div>
+          <div className="col-sm-1 lg-d-none"></div>
+
+          <div className="col-4 col-sm-10 pl-2 sm-pl-0">
             <div className="about-image-top">
               <img src={chefTop} alt="Chef Top" className="about-img" />
             </div>
@@ -192,7 +193,7 @@ const Main = () => {
             </div>
           </div>
 
-          <div className="col-2"></div>
+          <div className="col-2 col-sm-1"></div>
         </div>
       </div>
     </main>

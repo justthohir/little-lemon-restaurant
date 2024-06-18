@@ -1,6 +1,5 @@
 .logo {
   padding: 10px 0;
-  vertical-align: baseline;
 }
 
 .menu {
@@ -25,9 +24,40 @@
   text-decoration: none;
 }
 
+.burger-icon-menu {
+  display: none;
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 55px;
+  right: 8.5%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0;
+}
+
+.burger-menu-item {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.burger-menu-item a {
+  font-size: 12pt;
+  text-decoration: none;
+}
+
 .hero {
   padding: 2rem 0;
-  height: 21rem;
+}
+
+@media (min-width: 1280px) {
+  .hero {
+    height: 21rem;
+  }
 }
 
 .hero-content > h2 {
@@ -75,6 +105,10 @@
   -moz-transition: box-shadow 0.3s ease-in-out;
   -ms-transition: box-shadow 0.3s ease-in-out;
   -o-transition: box-shadow 0.3s ease-in-out;
+}
+
+.highlight {
+  margin-top: 7rem;
 }
 
 .highlight-button {
@@ -132,7 +166,6 @@
 .card p {
   margin: -0.5rem 0;
   padding: 0rem 1.5rem;
-  height: 150px;
 }
 
 .card-order {
@@ -158,14 +191,15 @@
   padding: 5rem 0;
 }
 
+.testimoni-card {
+  height: 100%;
+  background: linear-gradient(to bottom, #495e57 50%, #edefee 0%);
+}
+
 .tesmoni-title h1 {
   max-width: 100% !important;
   display: flex;
   justify-content: center;
-}
-
-.testimoni-card {
-  border-radius: 1rem;
 }
 
 .testimoni-user {
@@ -246,4 +280,71 @@
 
 .footer-menu-item a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .testimoni-subtitle {
+    font-size: 23pt !important;
+  }
+
+  .markazi-title {
+    font-size: 55pt;
+    margin-bottom: 10px;
+  }
+
+  .markazi-subtitle {
+    font-size: 35pt;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .logo-icon {
+    width: 60%;
+    display: flex;
+    justify-content: start;
+  }
+
+  .burger-icon-menu {
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    padding: 5px 0;
+  }
+
+  .burger-icon-menu img {
+    width: 25px;
+  }
+
+  .highlight {
+    margin-top: 3rem;
+  }
+
+  .footer {
+    padding: 1rem 0;
+  }
+
+  .footer-sm {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sm-pl-0 {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .logo-icon {
+    width: 73%;
+  }
+
+  .burger-icon-menu {
+    width: 27%;
+  }
 }

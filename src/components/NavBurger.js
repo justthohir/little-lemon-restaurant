@@ -1,35 +1,35 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-const Nav = (props) => {
+const NavBurger = forwardRef((props, ref) => {
   return (
-    <nav className="nav col-6 sm-d-none">
-      <ul className="menu">
-        <li className="menu-item">
+    <nav>
+      <ul ref={ref} className="burger-menu">
+        <li className="burger-menu-item">
           <a href="Home" className="karla-sec-category color-sec-black">
             Home
           </a>
         </li>
-        <li className="menu-item">
+        <li className="burger-menu-item">
           <a href="About" className="karla-sec-category color-sec-black">
             About
           </a>
         </li>
-        <li className="menu-item">
+        <li className="burger-menu-item">
           <a href="Menu" className="karla-sec-category color-sec-black">
             Menu
           </a>
         </li>
-        <li className="menu-item">
+        <li className="burger-menu-item">
           <a href="Reservations" className="karla-sec-category color-sec-black">
             Reservations
           </a>
         </li>
-        <li className="menu-item">
+        <li className="burger-menu-item">
           <a href="order-online" className="karla-sec-category color-sec-black">
             Order Online
           </a>
         </li>
-        <li className="menu-item">
+        <li className="burger-menu-item">
           <a href="login" className="karla-sec-category color-sec-black">
             Login
           </a>
@@ -37,6 +37,6 @@ const Nav = (props) => {
       </ul>
     </nav>
   );
-};
+});
 
-export default Nav;
+export default NavBurger;

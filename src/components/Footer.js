@@ -5,13 +5,19 @@ const Footer = () => {
   return (
     <footer className="footer width-100 bg-sec-white">
       <div className="container">
-        <div className="col-2"></div>
+        <div className="col-2 col-sm-1"></div>
 
-        <div className="col-2">
+        <div className="col-sm-10 footer-sm lg-d-none">
+          <p className="karla-highlight fz-14">
+            Little Lemon &copy; 2024 All Rights Reserved.
+          </p>
+        </div>
+
+        <div className="col-2 sm-d-none">
           <img src={Logo} alt="Little Lemon Logo" />
         </div>
 
-        <div className="col-2">
+        <div className="col-2 sm-d-none">
           <h3 className="karla-sec-category color-sec-black m-0">Navigation</h3>
           <ul className="footer-menu p-0">
             <li className="footer-menu-item">
@@ -65,7 +71,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="col-2">
+        <div className="col-2 sm-d-none">
           <h3 className="karla-sec-category color-sec-black m-0">Support</h3>
           <ul className="footer-menu p-0">
             <li className="footer-menu-item">
@@ -79,7 +85,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="col-2">
+        <div className="col-2 sm-d-none">
           <h3 className="karla-sec-category color-sec-black m-0">
             Social Media
           </h3>
@@ -117,7 +123,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="col-2"></div>
+        <div className="col-2 col-sm-1"></div>
       </div>
     </footer>
   );
