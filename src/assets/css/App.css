@@ -230,3 +230,20 @@
   object-fit: cover;
   border-radius: 1rem;
 }
+
+.footer {
+  padding: 5rem 0;
+}
+
+.footer-menu-item {
+  list-style-type: none;
+  padding: 5px 0;
+}
+
+.footer-menu-item a {
+  text-decoration: none;
+}
+
+.footer-menu-item a:hover {
+  text-decoration: underline;
+}

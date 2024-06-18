@@ -3,63 +3,121 @@ import Logo from "../assets/images/Logo.svg";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="footer-container">
-        <img src={Logo} alt="Little Lemon Logo" />
-      </div>
+    <footer className="footer width-100 bg-sec-white">
+      <div className="container">
+        <div className="col-2"></div>
 
-      <div className="footer-container">
-        <h3>Navigation</h3>
-        <ul>
-          <li>
-            <a href="Home">Home</a>
-          </li>
-          <li>
-            <a href="About">About</a>
-          </li>
-          <li>
-            <a href="Menu">Menu</a>
-          </li>
-          <li>
-            <a href="Reservations">Reservations</a>
-          </li>
-          <li>
-            <a href="order-online">Order Online</a>
-          </li>
-          <li>
-            <a href="login">Login</a>
-          </li>
-        </ul>
-      </div>
+        <div className="col-2">
+          <img src={Logo} alt="Little Lemon Logo" />
+        </div>
 
-      <div className="footer-container">
-        <h3>Support</h3>
-        <ul>
-          <li>
-            <a href="contact-us">Contact Us</a>
-          </li>
-        </ul>
-      </div>
+        <div className="col-2">
+          <h3 className="karla-sec-category color-sec-black m-0">Navigation</h3>
+          <ul className="footer-menu p-0">
+            <li className="footer-menu-item">
+              <a
+                href="Home"
+                className="karla-sec-category color-sec-black fz-14"
+              >
+                Home
+              </a>
+            </li>
+            <li className="footer-menu-item">
+              <a
+                href="About"
+                className="karla-sec-category color-sec-black fz-14"
+              >
+                About
+              </a>
+            </li>
+            <li className="footer-menu-item">
+              <a
+                href="Menu"
+                className="karla-sec-category color-sec-black fz-14"
+              >
+                Menu
+              </a>
+            </li>
+            <li className="footer-menu-item">
+              <a
+                href="Reservations"
+                className="karla-sec-category color-sec-black fz-14"
+              >
+                Reservations
+              </a>
+            </li>
+            <li className="footer-menu-item">
+              <a
+                href="order-online"
+                className="karla-sec-category color-sec-black fz-14"
+              >
+                Order Online
+              </a>
+            </li>
+            <li className="footer-menu-item">
+              <a
+                href="login"
+                className="karla-sec-category color-sec-black fz-14"
+              >
+                Login
+              </a>
+            </li>
+          </ul>
+        </div>
 
-      <div className="footer-container">
-        <h3>Social Media</h3>
-        <ul>
-          <li>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer">
-              Twitter
-            </a>
-          </li>
-        </ul>
+        <div className="col-2">
+          <h3 className="karla-sec-category color-sec-black m-0">Support</h3>
+          <ul className="footer-menu p-0">
+            <li className="footer-menu-item">
+              <a
+                href="contact-us"
+                className="karla-sec-category color-sec-black fz-14"
+              >
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="col-2">
+          <h3 className="karla-sec-category color-sec-black m-0">
+            Social Media
+          </h3>
+          <ul className="footer-menu p-0">
+            <li className="footer-menu-item">
+              <a
+                href="https://instagram.com"
+                className="karla-sec-category color-sec-black fz-14"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Instagram
+              </a>
+            </li>
+            <li className="footer-menu-item">
+              <a
+                href="https://facebook.com"
+                className="karla-sec-category color-sec-black fz-14"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Facebook
+              </a>
+            </li>
+            <li className="footer-menu-item">
+              <a
+                href="https://twitter.com"
+                className="karla-sec-category color-sec-black fz-14"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="col-2"></div>
       </div>
     </footer>
   );

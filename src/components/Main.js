@@ -3,15 +3,15 @@ import Button from "./Button";
 import MenuCard from "./MenuCard";
 import TestimoniCard from "./TestimoniCard";
 
-import FoodImg from "../assets/images/food-hero.jpg";
-import bruchetta from "../assets/images/bruchetta.svg";
-import salad from "../assets/images/salad.jpg";
+import FoodImg from "../assets/images/food-hero.webp";
+import bruchetta from "../assets/images/bruchetta.webp";
+import salad from "../assets/images/salad.webp";
 import lemon from "../assets/images/lemon.jpg";
 import emily from "../assets/images/emily.jpg";
 import james from "../assets/images/james.jpg";
 import sophia from "../assets/images/sophia.webp";
-import chefTop from "../assets/images/chef-top.jpg";
-import chefBot from "../assets/images/chef-bot.jpg";
+import chefTop from "../assets/images/chef-top.webp";
+import chefBot from "../assets/images/chef-bot.webp";
 
 const Main = () => {
   const menuList = [
