@@ -1,38 +1,42 @@
 import React, { forwardRef } from "react";
+import { NavLink } from "react-router-dom";
 
 const NavBurger = forwardRef((props, ref) => {
   return (
     <nav>
       <ul ref={ref} className="burger-menu">
         <li className="burger-menu-item">
-          <a href="Home" className="karla-sec-category color-sec-black">
+          <NavLink to="/" className="karla-sec-category color-sec-black">
             Home
-          </a>
+          </NavLink>
         </li>
         <li className="burger-menu-item">
-          <a href="About" className="karla-sec-category color-sec-black">
-            About
-          </a>
-        </li>
-        <li className="burger-menu-item">
-          <a href="Menu" className="karla-sec-category color-sec-black">
-            Menu
-          </a>
-        </li>
-        <li className="burger-menu-item">
-          <a href="Reservations" className="karla-sec-category color-sec-black">
+          <NavLink
+            to="/reservations"
+            className="karla-sec-category color-sec-black"
+          >
             Reservations
-          </a>
+          </NavLink>
         </li>
         <li className="burger-menu-item">
-          <a href="order-online" className="karla-sec-category color-sec-black">
+          <NavLink to="/" className="karla-sec-category color-sec-black">
             Order Online
-          </a>
+          </NavLink>
         </li>
         <li className="burger-menu-item">
-          <a href="login" className="karla-sec-category color-sec-black">
+          <NavLink to="/" className="karla-sec-category color-sec-black">
+            About
+          </NavLink>
+        </li>
+        <li className="burger-menu-item">
+          <NavLink to="/" className="karla-sec-category color-sec-black">
+            Contact Us
+          </NavLink>
+        </li>
+        <li className="burger-menu-item">
+          <NavLink to="/" className="karla-sec-category color-sec-black">
             Login
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>

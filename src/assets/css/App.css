@@ -108,7 +108,7 @@
 }
 
 .highlight {
-  margin-top: 7rem;
+  margin-top: 7rem !important;
 }
 
 .highlight-button {
@@ -236,7 +236,7 @@
 }
 
 .about {
-  padding: 5rem 0;
+  padding: 5rem 0 !important;
 }
 
 .about h4 {
@@ -283,68 +283,68 @@
 }
 
 @media (max-width: 1024px) {
-  .testimoni-subtitle {
-    font-size: 23pt !important;
-  }
-
   .markazi-title {
-    font-size: 55pt;
-    margin-bottom: 10px;
+    font-size: 55pt !important;
+    margin-bottom: 10px !important;
   }
 
   .markazi-subtitle {
-    font-size: 35pt;
+    font-size: 35pt !important;
+  }
+
+  .testimoni-subtitle {
+    font-size: 23pt !important;
   }
 }
 
 @media (max-width: 768px) {
   .logo {
-    display: flex;
-    justify-content: center;
-    padding: 0;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 0 !important;
   }
 
   .logo-icon {
-    width: 60%;
-    display: flex;
-    justify-content: start;
+    width: 60% !important;
+    display: flex !important;
+    justify-content: start !important;
   }
 
   .burger-icon-menu {
-    width: 40%;
-    display: flex;
-    justify-content: end;
-    padding: 5px 0;
+    width: 40% !important;
+    display: flex !important;
+    justify-content: end !important;
+    padding: 5px 0 !important;
   }
 
   .burger-icon-menu img {
-    width: 25px;
+    width: 25px !important;
   }
 
   .highlight {
-    margin-top: 3rem;
+    margin-top: 3rem !important;
   }
 
   .footer {
-    padding: 1rem 0;
+    padding: 1rem 0 !important;
   }
 
   .footer-sm {
-    display: flex;
-    justify-content: center;
+    display: flex !important;
+    justify-content: center !important;
   }
 
   .sm-pl-0 {
-    padding-left: 0;
+    padding-left: 0 !important;
   }
 }
 
 @media (max-width: 425px) {
   .logo-icon {
-    width: 73%;
+    width: 73% !important;
   }
 
   .burger-icon-menu {
-    width: 27%;
+    width: 27% !important;
   }
 }

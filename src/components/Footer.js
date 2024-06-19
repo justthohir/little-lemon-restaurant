@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../assets/images/Logo.svg";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -21,52 +22,52 @@ const Footer = () => {
           <h3 className="karla-sec-category color-sec-black m-0">Navigation</h3>
           <ul className="footer-menu p-0">
             <li className="footer-menu-item">
-              <a
-                href="Home"
+              <NavLink
+                to="/"
                 className="karla-sec-category color-sec-black fz-14"
               >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="footer-menu-item">
-              <a
-                href="About"
-                className="karla-sec-category color-sec-black fz-14"
-              >
-                About
-              </a>
-            </li>
-            <li className="footer-menu-item">
-              <a
-                href="Menu"
-                className="karla-sec-category color-sec-black fz-14"
-              >
-                Menu
-              </a>
-            </li>
-            <li className="footer-menu-item">
-              <a
-                href="Reservations"
+              <NavLink
+                to="/reservations"
                 className="karla-sec-category color-sec-black fz-14"
               >
                 Reservations
-              </a>
+              </NavLink>
             </li>
             <li className="footer-menu-item">
-              <a
-                href="order-online"
+              <NavLink
+                to="/"
                 className="karla-sec-category color-sec-black fz-14"
               >
                 Order Online
-              </a>
+              </NavLink>
             </li>
             <li className="footer-menu-item">
-              <a
-                href="login"
+              <NavLink
+                to="/"
+                className="karla-sec-category color-sec-black fz-14"
+              >
+                About
+              </NavLink>
+            </li>
+            <li className="footer-menu-item">
+              <NavLink
+                to="/"
+                className="karla-sec-category color-sec-black fz-14"
+              >
+                Contact Us
+              </NavLink>
+            </li>
+            <li className="footer-menu-item">
+              <NavLink
+                to="/"
                 className="karla-sec-category color-sec-black fz-14"
               >
                 Login
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -75,12 +76,12 @@ const Footer = () => {
           <h3 className="karla-sec-category color-sec-black m-0">Support</h3>
           <ul className="footer-menu p-0">
             <li className="footer-menu-item">
-              <a
-                href="contact-us"
+              <NavLink
+                to="/"
                 className="karla-sec-category color-sec-black fz-14"
               >
                 Contact Us
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

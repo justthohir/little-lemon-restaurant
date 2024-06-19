@@ -1,38 +1,42 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Nav = (props) => {
   return (
     <nav className="nav col-6 sm-d-none">
       <ul className="menu">
         <li className="menu-item">
-          <a href="Home" className="karla-sec-category color-sec-black">
+          <NavLink to="/" className="karla-sec-category color-sec-black">
             Home
-          </a>
+          </NavLink>
         </li>
         <li className="menu-item">
-          <a href="About" className="karla-sec-category color-sec-black">
-            About
-          </a>
-        </li>
-        <li className="menu-item">
-          <a href="Menu" className="karla-sec-category color-sec-black">
-            Menu
-          </a>
-        </li>
-        <li className="menu-item">
-          <a href="Reservations" className="karla-sec-category color-sec-black">
+          <NavLink
+            to="/reservations"
+            className="karla-sec-category color-sec-black"
+          >
             Reservations
-          </a>
+          </NavLink>
         </li>
         <li className="menu-item">
-          <a href="order-online" className="karla-sec-category color-sec-black">
+          <NavLink to="/" className="karla-sec-category color-sec-black">
             Order Online
-          </a>
+          </NavLink>
         </li>
         <li className="menu-item">
-          <a href="login" className="karla-sec-category color-sec-black">
+          <NavLink to="/" className="karla-sec-category color-sec-black">
+            About
+          </NavLink>
+        </li>
+        <li className="menu-item">
+          <NavLink to="/" className="karla-sec-category color-sec-black">
+            Contact Us
+          </NavLink>
+        </li>
+        <li className="menu-item">
+          <NavLink to="/" className="karla-sec-category color-sec-black">
             Login
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>
