@@ -31,10 +31,10 @@ const Footer = () => {
             </li>
             <li className="footer-menu-item">
               <NavLink
-                to="/reservations"
+                to="/booking"
                 className="karla-sec-category color-sec-black fz-14"
               >
-                Reservations
+                Booking
               </NavLink>
             </li>
             <li className="footer-menu-item">

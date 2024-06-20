@@ -12,10 +12,10 @@ const NavBurger = forwardRef((props, ref) => {
         </li>
         <li className="burger-menu-item">
           <NavLink
-            to="/reservations"
+            to="/booking"
             className="karla-sec-category color-sec-black"
           >
-            Reservations
+            Booking
           </NavLink>
         </li>
         <li className="burger-menu-item">

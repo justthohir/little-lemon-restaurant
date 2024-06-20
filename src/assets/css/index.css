@@ -62,7 +62,7 @@ body {
 }
 
 .bg-primary-yellow {
-  background-color: #f4ce14;
+  background-color: #f4ce14 !important;
 }
 
 .color-primary-green {
@@ -98,7 +98,7 @@ body {
 }
 
 .color-sec-white {
-  color: #edefee;
+  color: #edefee !important;
 }
 
 .color-sec-black {
@@ -232,6 +232,10 @@ body {
   .sm-d-none {
     display: none !important;
   }
+
+  .lg-d-none {
+    display: block;
+  }
 }
 
 /* margin class */
@@ -253,6 +257,9 @@ body {
 
 .mt-2 {
   margin-top: 2rem;
+}
+.mt-3 {
+  margin-top: 3rem;
 }
 
 .mt-4 {

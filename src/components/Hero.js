@@ -19,7 +19,7 @@ const Hero = () => {
               We are family owned Mediterranean restaurant, focus on traditional
               recipes serve with a modern twist.
             </p>
-            <NavLink to="/reservations">
+            <NavLink to="/booking">
               <Button
                 text="Reserve a Table"
                 className="btn-hero-reserve karla-sec-category fz-14 bg-primary-yellow"
