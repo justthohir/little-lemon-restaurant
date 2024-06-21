@@ -59,7 +59,7 @@ const BookingForm = (props) => {
   });
 
   const dateChange = (e) => {
-    props.dispatch({ type: "Weekend", date: e.target.value });
+    props.dispatch({ date: e.target.value });
     formik.setFieldValue("date", e.target.value);
   };
 
