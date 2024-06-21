@@ -19,7 +19,9 @@ const Footer = () => {
         </div>
 
         <div className="col-2 sm-d-none">
-          <h3 className="karla-sec-category color-sec-black m-0">Navigation</h3>
+          <h3 className="karla-sec-category color-sec-black m-0 mb-1">
+            Navigation
+          </h3>
           <ul className="footer-menu p-0">
             <li className="footer-menu-item">
               <NavLink
@@ -27,22 +29,6 @@ const Footer = () => {
                 className="karla-sec-category color-sec-black fz-14"
               >
                 Home
-              </NavLink>
-            </li>
-            <li className="footer-menu-item">
-              <NavLink
-                to="/booking"
-                className="karla-sec-category color-sec-black fz-14"
-              >
-                Booking
-              </NavLink>
-            </li>
-            <li className="footer-menu-item">
-              <NavLink
-                to="/"
-                className="karla-sec-category color-sec-black fz-14"
-              >
-                Order Online
               </NavLink>
             </li>
             <li className="footer-menu-item">
@@ -58,7 +44,23 @@ const Footer = () => {
                 to="/"
                 className="karla-sec-category color-sec-black fz-14"
               >
-                Contact Us
+                Menu
+              </NavLink>
+            </li>
+            <li className="footer-menu-item">
+              <NavLink
+                to="/reservations"
+                className="karla-sec-category color-sec-black fz-14"
+              >
+                Reservations
+              </NavLink>
+            </li>
+            <li className="footer-menu-item">
+              <NavLink
+                to="/"
+                className="karla-sec-category color-sec-black fz-14"
+              >
+                Order Online
               </NavLink>
             </li>
             <li className="footer-menu-item">
@@ -73,7 +75,9 @@ const Footer = () => {
         </div>
 
         <div className="col-2 sm-d-none">
-          <h3 className="karla-sec-category color-sec-black m-0">Support</h3>
+          <h3 className="karla-sec-category color-sec-black m-0 mb-1">
+            Support
+          </h3>
           <ul className="footer-menu p-0">
             <li className="footer-menu-item">
               <NavLink
@@ -87,7 +91,7 @@ const Footer = () => {
         </div>
 
         <div className="col-2 sm-d-none">
-          <h3 className="karla-sec-category color-sec-black m-0">
+          <h3 className="karla-sec-category color-sec-black m-0 mb-1">
             Social Media
           </h3>
           <ul className="footer-menu p-0">

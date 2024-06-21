@@ -1,17 +1,25 @@
 import "./assets/css/App.css";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import BookingPage from "./pages/BookingPage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/reservations",
+      element: <BookingPage />,
+    },
+  ]);
+
   return (
-    <>
-      <Header />
-
-      <Main />
-
-      <Footer />
-    </>
+    <ChakraProvider>
+      <RouterProvider router={router} />
+    </ChakraProvider>
   );
 }
 

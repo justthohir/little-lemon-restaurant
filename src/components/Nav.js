@@ -11,26 +11,26 @@ const Nav = (props) => {
           </NavLink>
         </li>
         <li className="menu-item">
-          <NavLink
-            to="/booking"
-            className="karla-sec-category color-sec-black"
-          >
-            Booking
-          </NavLink>
-        </li>
-        <li className="menu-item">
-          <NavLink to="/" className="karla-sec-category color-sec-black">
-            Order Online
-          </NavLink>
-        </li>
-        <li className="menu-item">
           <NavLink to="/" className="karla-sec-category color-sec-black">
             About
           </NavLink>
         </li>
         <li className="menu-item">
           <NavLink to="/" className="karla-sec-category color-sec-black">
-            Contact Us
+            Menu
+          </NavLink>
+        </li>
+        <li className="menu-item">
+          <NavLink
+            to="/reservations"
+            className="karla-sec-category color-sec-black"
+          >
+            Reservations
+          </NavLink>
+        </li>
+        <li className="menu-item">
+          <NavLink to="/" className="karla-sec-category color-sec-black">
+            Order Online
           </NavLink>
         </li>
         <li className="menu-item">

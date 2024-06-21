@@ -19,9 +19,9 @@ import {
   Spinner,
 } from "@chakra-ui/react";
 
-const BookingForm = () => {
+const BookingForm = (props) => {
   const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-  const listTime = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+  const availableTimes = props.availableTimes.time;
   const [isLoading, setIsLoading] = useState(false);
 
   const submit = async (values) => {
@@ -58,6 +58,11 @@ const BookingForm = () => {
     }),
   });
 
+  const dateChange = (e) => {
+    props.dispatch({ type: "Weekend", date: e.target.value });
+    formik.setFieldValue("date", e.target.value);
+  };
+
   return (
     <div className="booking width-100 bg-primary-green">
       <div className="container">
@@ -84,12 +89,16 @@ const BookingForm = () => {
                     <Input
                       id="date"
                       name="date"
+                      aria-label="Choose Date"
+                      aria-required="true"
                       type="date"
                       value={formik.values.date}
-                      onChange={formik.handleChange}
+                      onChange={dateChange}
                     />
                     {formik.errors.date && formik.touched.date ? (
-                      <FormErrorMessage>{formik.errors.date}</FormErrorMessage>
+                      <FormErrorMessage aria-errormessage={formik.errors.date}>
+                        {formik.errors.date}
+                      </FormErrorMessage>
                     ) : null}
                   </FormControl>
 
@@ -100,13 +109,15 @@ const BookingForm = () => {
                     <Select
                       id="time"
                       name="time"
+                      aria-label="Time"
+                      aria-required="true"
                       value={formik.values.time}
                       onChange={formik.handleChange}
                     >
                       <option className="color-sec-black" value="">
                         _ _ : _ _
                       </option>
-                      {listTime.map((vTime, iTime) => {
+                      {availableTimes.map((vTime, iTime) => {
                         return (
                           <option
                             key={iTime}
@@ -119,7 +130,9 @@ const BookingForm = () => {
                       })}
                     </Select>
                     {formik.errors.time && formik.touched.time ? (
-                      <FormErrorMessage>{formik.errors.time}</FormErrorMessage>
+                      <FormErrorMessage aria-errormessage={formik.errors.time}>
+                        {formik.errors.time}
+                      </FormErrorMessage>
                     ) : null}
                   </FormControl>
 
@@ -131,6 +144,8 @@ const BookingForm = () => {
                       defaultValue={0}
                       min={1}
                       max={10}
+                      aria-label="Number of Guest"
+                      aria-required="true"
                       id="guest"
                       name="guest"
                       clampValueOnBlur={false}
@@ -145,7 +160,9 @@ const BookingForm = () => {
                       </NumberInputStepper>
                     </NumberInput>
                     {formik.errors.guest && formik.touched.guest ? (
-                      <FormErrorMessage>{formik.errors.guest}</FormErrorMessage>
+                      <FormErrorMessage aria-errormessage={formik.errors.guest}>
+                        {formik.errors.guest}
+                      </FormErrorMessage>
                     ) : null}
                   </FormControl>
 
@@ -158,6 +175,8 @@ const BookingForm = () => {
                     <Select
                       id="occasion"
                       name="occasion"
+                      aria-label="Occasion"
+                      aria-required="true"
                       value={formik.values.occasion}
                       onChange={formik.handleChange}
                     >
@@ -172,7 +191,9 @@ const BookingForm = () => {
                       </option>
                     </Select>
                     {formik.errors.occasion && formik.touched.occasion ? (
-                      <FormErrorMessage>
+                      <FormErrorMessage
+                        aria-errormessage={formik.errors.occasion}
+                      >
                         {formik.errors.occasion}
                       </FormErrorMessage>
                     ) : null}
@@ -185,13 +206,17 @@ const BookingForm = () => {
                     <Input
                       id="name"
                       name="name"
+                      aria-label="Full Name"
+                      aria-required="true"
                       placeholder="eg. Sophia Latjuba"
                       type="name"
                       value={formik.values.name}
                       onChange={formik.handleChange}
                     />
                     {formik.errors.name && formik.touched.name ? (
-                      <FormErrorMessage>{formik.errors.name}</FormErrorMessage>
+                      <FormErrorMessage aria-errormessage={formik.errors.name}>
+                        {formik.errors.name}
+                      </FormErrorMessage>
                     ) : null}
                   </FormControl>
 
@@ -202,13 +227,17 @@ const BookingForm = () => {
                     <Input
                       id="email"
                       name="email"
+                      aria-label="Email Address"
+                      aria-required="true"
                       placeholder="example@domain.com"
                       type="email"
                       value={formik.values.email}
                       onChange={formik.handleChange}
                     />
                     {formik.errors.email && formik.touched.email ? (
-                      <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
+                      <FormErrorMessage aria-errormessage={formik.errors.email}>
+                        {formik.errors.email}
+                      </FormErrorMessage>
                     ) : null}
                   </FormControl>
 
@@ -219,22 +248,28 @@ const BookingForm = () => {
                     <Textarea
                       id="note"
                       name="note"
+                      aria-label="Note Reservation"
+                      aria-required="true"
                       height={150}
                       value={formik.values.note}
                       onChange={formik.handleChange}
                     />
                     {formik.errors.note && formik.touched.note ? (
-                      <FormErrorMessage>{formik.errors.note}</FormErrorMessage>
+                      <FormErrorMessage aria-errormessage={formik.errors.note}>
+                        {formik.errors.note}
+                      </FormErrorMessage>
                     ) : null}
                   </FormControl>
 
                   <Button
                     isDisabled={isLoading}
                     type="submit"
+                    aria-label="Make Your Reservation"
+                    aria-required="true"
                     width="full"
                     className="btn-submit bg-primary-yellow"
                   >
-                    Make Your reservation
+                    Make Your Reservation
                     {isLoading ? <Spinner ml="1rem" /> : null}
                   </Button>
                 </VStack>
