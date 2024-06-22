@@ -272,7 +272,7 @@ const BookingForm = (props) => {
                   <Button
                     isDisabled={isLoading}
                     type="submit"
-                    aria-label="Make Your Reservation"
+                    aria-label="On Click"
                     aria-required="true"
                     width="full"
                     className="btn-submit bg-primary-yellow"
