@@ -53,16 +53,16 @@ const BookingForm = (props) => {
       }
     },
     validationSchema: Yup.object().shape({
-      // date: Yup.date().required("Required!"),
-      // time: Yup.string().required("Required!"),
-      // guest: Yup.number()
-      //   .min(1, "Minimum guest is 1")
-      //   .max(10, "Maximum guest is 10")
-      //   .required("Required!"),
-      // occasion: Yup.string().required("Required!"),
-      // name: Yup.string().required("Required!"),
-      // email: Yup.string().email("Invalid email!").required("Required!"),
-      // note: Yup.string().required("Required!"),
+      date: Yup.date().required("Required!"),
+      time: Yup.string().required("Required!"),
+      guest: Yup.number()
+        .min(1, "Minimum guest is 1")
+        .max(10, "Maximum guest is 10")
+        .required("Required!"),
+      occasion: Yup.string().required("Required!"),
+      name: Yup.string().required("Required!"),
+      email: Yup.string().email("Invalid email!").required("Required!"),
+      note: Yup.string().required("Required!"),
     }),
   });
 
