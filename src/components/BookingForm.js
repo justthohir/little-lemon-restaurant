@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useAlertContext } from "../context/AlertContext";
 import {
   Box,
   Button,
@@ -21,13 +22,9 @@ import {
 
 const BookingForm = (props) => {
   const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-  const availableTimes = props.availableTimes.time;
+  const availableTimes = props.availableTimes;
   const [isLoading, setIsLoading] = useState(false);
-
-  const submit = async (values) => {
-    await wait(2000);
-    console.log(values);
-  };
+  const { onOpen, onClose } = useAlertContext();
 
   const formik = useFormik({
     initialValues: {
@@ -41,20 +38,31 @@ const BookingForm = (props) => {
     },
     onSubmit: async (values) => {
       setIsLoading(true);
-      await submit(values);
-      setIsLoading(false);
+      try {
+        await props.submitAPI(values);
+        props.setBookData({ ...values, type: "update" });
+        setIsLoading(false);
+        onOpen("success", "Your Reservation has been confirmed");
+        await wait(1500);
+        onClose();
+      } catch (error) {
+        setIsLoading(false);
+        onOpen("failed", "Your Reservation has been failed!");
+        console.log(error);
+        throw new Error();
+      }
     },
     validationSchema: Yup.object().shape({
-      date: Yup.date().required("Required!"),
-      time: Yup.string().required("Required!"),
-      guest: Yup.number()
-        .min(1, "Minimum guest is 1")
-        .max(10, "Maximum guest is 10")
-        .required("Required!"),
-      occasion: Yup.string().required("Required!"),
-      name: Yup.string().required("Required!"),
-      email: Yup.string().email("Invalid email!").required("Required!"),
-      note: Yup.string().required("Required!"),
+      // date: Yup.date().required("Required!"),
+      // time: Yup.string().required("Required!"),
+      // guest: Yup.number()
+      //   .min(1, "Minimum guest is 1")
+      //   .max(10, "Maximum guest is 10")
+      //   .required("Required!"),
+      // occasion: Yup.string().required("Required!"),
+      // name: Yup.string().required("Required!"),
+      // email: Yup.string().email("Invalid email!").required("Required!"),
+      // note: Yup.string().required("Required!"),
     }),
   });
 
@@ -77,7 +85,7 @@ const BookingForm = (props) => {
               <h1 className="markazi-subtitle m-0 color-primary-yellow text-center sm-d-none">
                 Reserve Your Table at Little Lemon
               </h1>
-              <h1 className="markazi-subtitle m-0 color-primary-yellow text-center lg-d-none">
+              <h1 className="markazi-subtitle m-0 color-primary-yellow text-center testimoni-subtitle lg-d-none">
                 Reserve Your Table
               </h1>
               <form onSubmit={formik.handleSubmit} className="mt-3">
