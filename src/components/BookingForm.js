@@ -11,7 +11,6 @@ import {
   Input,
   Select,
   Textarea,
-  VStack,
   NumberInput,
   NumberInputField,
   NumberInputStepper,
@@ -78,7 +77,7 @@ const BookingForm = (props) => {
           <div className="col-2 col-sm-1"></div>
 
           <div className="col-8 col-sm-10">
-            <Box p={6} rounded="md" w="100%" className="color-sec-white">
+            <Box p={6} rounded="md" w="100%">
               <h1 className="karla-p fz-16 m-0 color-sec-white text-center">
                 Booking Page
               </h1>
@@ -89,198 +88,242 @@ const BookingForm = (props) => {
                 Reserve Your Table
               </h1>
               <form onSubmit={formik.handleSubmit} className="mt-3">
-                <VStack spacing={4}>
-                  <FormControl
-                    isInvalid={formik.errors.date && formik.touched.date}
-                  >
-                    <FormLabel htmlFor="date">Choose Date</FormLabel>
-                    <Input
-                      id="date"
-                      name="date"
-                      aria-label="Choose Date"
-                      aria-required="true"
-                      type="date"
-                      value={formik.values.date}
-                      onChange={dateChange}
-                    />
-                    {formik.errors.date && formik.touched.date ? (
-                      <FormErrorMessage aria-errormessage={formik.errors.date}>
-                        {formik.errors.date}
-                      </FormErrorMessage>
-                    ) : null}
-                  </FormControl>
-
-                  <FormControl
-                    isInvalid={formik.errors.time && formik.touched.time}
-                  >
-                    <FormLabel htmlFor="time">Time</FormLabel>
-                    <Select
-                      id="time"
-                      name="time"
-                      aria-label="Time"
-                      aria-required="true"
-                      value={formik.values.time}
-                      onChange={formik.handleChange}
+                <div className="container">
+                  <div className="row">
+                    <FormControl
+                      isInvalid={formik.errors.date && formik.touched.date}
+                      className="col-6 col-sm-12"
                     >
-                      <option className="color-sec-black" value="">
-                        _ _ : _ _
-                      </option>
-                      {availableTimes.map((vTime, iTime) => {
-                        return (
-                          <option
-                            key={iTime}
-                            className="color-sec-black"
-                            value={vTime}
-                          >
-                            {vTime}
-                          </option>
-                        );
-                      })}
-                    </Select>
-                    {formik.errors.time && formik.touched.time ? (
-                      <FormErrorMessage aria-errormessage={formik.errors.time}>
-                        {formik.errors.time}
-                      </FormErrorMessage>
-                    ) : null}
-                  </FormControl>
+                      <FormLabel className="color-sec-white" htmlFor="date">
+                        Choose Date
+                      </FormLabel>
+                      <Input
+                        bg="white"
+                        id="date"
+                        name="date"
+                        aria-label="Choose Date"
+                        aria-required="true"
+                        type="date"
+                        value={formik.values.date}
+                        onChange={dateChange}
+                      />
+                      {formik.errors.date && formik.touched.date ? (
+                        <FormErrorMessage
+                          aria-errormessage={formik.errors.date}
+                        >
+                          {formik.errors.date}
+                        </FormErrorMessage>
+                      ) : null}
+                    </FormControl>
 
-                  <FormControl
-                    isInvalid={formik.errors.guest && formik.touched.guest}
-                  >
-                    <FormLabel htmlFor="guest">Number of Guest</FormLabel>
-                    <NumberInput
-                      defaultValue={0}
-                      min={1}
-                      max={10}
-                      aria-label="Number of Guest"
-                      aria-required="true"
-                      id="guest"
-                      name="guest"
-                      clampValueOnBlur={false}
+                    <FormControl
+                      isInvalid={formik.errors.time && formik.touched.time}
+                      className="col-6 col-sm-12"
                     >
-                      <NumberInputField
-                        value={formik.values.guest}
+                      <FormLabel className="color-sec-white" htmlFor="time">
+                        Time
+                      </FormLabel>
+                      <Select
+                        bg="white"
+                        id="time"
+                        name="time"
+                        aria-label="Time"
+                        aria-required="true"
+                        value={formik.values.time}
+                        onChange={formik.handleChange}
+                      >
+                        <option className="color-sec-black" value="">
+                          _ _ : _ _
+                        </option>
+                        {availableTimes.map((vTime, iTime) => {
+                          return (
+                            <option
+                              key={iTime}
+                              className="color-sec-black"
+                              value={vTime}
+                            >
+                              {vTime}
+                            </option>
+                          );
+                        })}
+                      </Select>
+                      {formik.errors.time && formik.touched.time ? (
+                        <FormErrorMessage
+                          aria-errormessage={formik.errors.time}
+                        >
+                          {formik.errors.time}
+                        </FormErrorMessage>
+                      ) : null}
+                    </FormControl>
+
+                    <FormControl
+                      isInvalid={formik.errors.guest && formik.touched.guest}
+                      className="col-6 col-sm-12"
+                    >
+                      <FormLabel className="color-sec-white" htmlFor="guest">
+                        Number of Guest
+                      </FormLabel>
+                      <NumberInput
+                        bg="white"
+                        defaultValue={0}
+                        min={1}
+                        max={10}
+                        aria-label="Number of Guest"
+                        aria-required="true"
+                        id="guest"
+                        name="guest"
+                        clampValueOnBlur={false}
+                      >
+                        <NumberInputField
+                          value={formik.values.guest}
+                          onChange={formik.handleChange}
+                        />
+                        <NumberInputStepper>
+                          <NumberIncrementStepper />
+                          <NumberDecrementStepper />
+                        </NumberInputStepper>
+                      </NumberInput>
+                      {formik.errors.guest && formik.touched.guest ? (
+                        <FormErrorMessage
+                          aria-errormessage={formik.errors.guest}
+                        >
+                          {formik.errors.guest}
+                        </FormErrorMessage>
+                      ) : null}
+                    </FormControl>
+
+                    <FormControl
+                      isInvalid={
+                        formik.errors.occasion && formik.touched.occasion
+                      }
+                      className="col-6 col-sm-12"
+                    >
+                      <FormLabel className="color-sec-white" htmlFor="occasion">
+                        Occasion
+                      </FormLabel>
+                      <Select
+                        bg="white"
+                        id="occasion"
+                        name="occasion"
+                        aria-label="Occasion"
+                        aria-required="true"
+                        value={formik.values.occasion}
+                        onChange={formik.handleChange}
+                      >
+                        <option className="color-sec-black" value="">
+                          Choose Occasion
+                        </option>
+                        <option className="color-sec-black" value="Birthday">
+                          Birthday
+                        </option>
+                        <option className="color-sec-black" value="Anniversary">
+                          Anniversary
+                        </option>
+                      </Select>
+                      {formik.errors.occasion && formik.touched.occasion ? (
+                        <FormErrorMessage
+                          aria-errormessage={formik.errors.occasion}
+                        >
+                          {formik.errors.occasion}
+                        </FormErrorMessage>
+                      ) : null}
+                    </FormControl>
+
+                    <FormControl
+                      isInvalid={formik.errors.name && formik.touched.name}
+                      className="col-6 col-sm-12"
+                    >
+                      <FormLabel className="color-sec-white" htmlFor="name">
+                        Full Name
+                      </FormLabel>
+                      <Input
+                        bg="white"
+                        id="name"
+                        name="name"
+                        aria-label="Full Name"
+                        aria-required="true"
+                        placeholder="eg. Sophia Latjuba"
+                        type="name"
+                        value={formik.values.name}
                         onChange={formik.handleChange}
                       />
-                      <NumberInputStepper>
-                        <NumberIncrementStepper />
-                        <NumberDecrementStepper />
-                      </NumberInputStepper>
-                    </NumberInput>
-                    {formik.errors.guest && formik.touched.guest ? (
-                      <FormErrorMessage aria-errormessage={formik.errors.guest}>
-                        {formik.errors.guest}
-                      </FormErrorMessage>
-                    ) : null}
-                  </FormControl>
+                      {formik.errors.name && formik.touched.name ? (
+                        <FormErrorMessage
+                          aria-errormessage={formik.errors.name}
+                        >
+                          {formik.errors.name}
+                        </FormErrorMessage>
+                      ) : null}
+                    </FormControl>
 
-                  <FormControl
-                    isInvalid={
-                      formik.errors.occasion && formik.touched.occasion
-                    }
-                  >
-                    <FormLabel htmlFor="occasion">Occasion</FormLabel>
-                    <Select
-                      id="occasion"
-                      name="occasion"
-                      aria-label="Occasion"
-                      aria-required="true"
-                      value={formik.values.occasion}
-                      onChange={formik.handleChange}
+                    <FormControl
+                      isInvalid={formik.errors.email && formik.touched.email}
+                      className="col-6 col-sm-12"
                     >
-                      <option className="color-sec-black" value="">
-                        Choose Occasion
-                      </option>
-                      <option className="color-sec-black" value="Birthday">
-                        Birthday
-                      </option>
-                      <option className="color-sec-black" value="Anniversary">
-                        Anniversary
-                      </option>
-                    </Select>
-                    {formik.errors.occasion && formik.touched.occasion ? (
-                      <FormErrorMessage
-                        aria-errormessage={formik.errors.occasion}
+                      <FormLabel className="color-sec-white" htmlFor="email">
+                        Email Address
+                      </FormLabel>
+                      <Input
+                        bg="white"
+                        id="email"
+                        name="email"
+                        aria-label="Email Address"
+                        aria-required="true"
+                        placeholder="example@domain.com"
+                        type="email"
+                        value={formik.values.email}
+                        onChange={formik.handleChange}
+                      />
+                      {formik.errors.email && formik.touched.email ? (
+                        <FormErrorMessage
+                          aria-errormessage={formik.errors.email}
+                        >
+                          {formik.errors.email}
+                        </FormErrorMessage>
+                      ) : null}
+                    </FormControl>
+
+                    <FormControl
+                      isInvalid={formik.errors.note && formik.touched.note}
+                      className="col-12"
+                    >
+                      <FormLabel className="color-sec-white" htmlFor="note">
+                        Note Reservation
+                      </FormLabel>
+                      <Textarea
+                        bg="white"
+                        id="note"
+                        name="note"
+                        aria-label="Note Reservation"
+                        aria-required="true"
+                        height={150}
+                        value={formik.values.note}
+                        onChange={formik.handleChange}
+                      />
+                      {formik.errors.note && formik.touched.note ? (
+                        <FormErrorMessage
+                          aria-errormessage={formik.errors.note}
+                        >
+                          {formik.errors.note}
+                        </FormErrorMessage>
+                      ) : null}
+                    </FormControl>
+
+                    <FormControl className="col-12">
+                      <Button
+                        isDisabled={isLoading}
+                        type="submit"
+                        aria-label="On Click"
+                        aria-required="true"
+                        width="full"
+                        className="btn-submit bg-primary-yellow"
                       >
-                        {formik.errors.occasion}
-                      </FormErrorMessage>
-                    ) : null}
-                  </FormControl>
-
-                  <FormControl
-                    isInvalid={formik.errors.name && formik.touched.name}
-                  >
-                    <FormLabel htmlFor="name">Full Name</FormLabel>
-                    <Input
-                      id="name"
-                      name="name"
-                      aria-label="Full Name"
-                      aria-required="true"
-                      placeholder="eg. Sophia Latjuba"
-                      type="name"
-                      value={formik.values.name}
-                      onChange={formik.handleChange}
-                    />
-                    {formik.errors.name && formik.touched.name ? (
-                      <FormErrorMessage aria-errormessage={formik.errors.name}>
-                        {formik.errors.name}
-                      </FormErrorMessage>
-                    ) : null}
-                  </FormControl>
-
-                  <FormControl
-                    isInvalid={formik.errors.email && formik.touched.email}
-                  >
-                    <FormLabel htmlFor="email">Email Address</FormLabel>
-                    <Input
-                      id="email"
-                      name="email"
-                      aria-label="Email Address"
-                      aria-required="true"
-                      placeholder="example@domain.com"
-                      type="email"
-                      value={formik.values.email}
-                      onChange={formik.handleChange}
-                    />
-                    {formik.errors.email && formik.touched.email ? (
-                      <FormErrorMessage aria-errormessage={formik.errors.email}>
-                        {formik.errors.email}
-                      </FormErrorMessage>
-                    ) : null}
-                  </FormControl>
-
-                  <FormControl
-                    isInvalid={formik.errors.note && formik.touched.note}
-                  >
-                    <FormLabel htmlFor="note">Note Reservation</FormLabel>
-                    <Textarea
-                      id="note"
-                      name="note"
-                      aria-label="Note Reservation"
-                      aria-required="true"
-                      height={150}
-                      value={formik.values.note}
-                      onChange={formik.handleChange}
-                    />
-                    {formik.errors.note && formik.touched.note ? (
-                      <FormErrorMessage aria-errormessage={formik.errors.note}>
-                        {formik.errors.note}
-                      </FormErrorMessage>
-                    ) : null}
-                  </FormControl>
-
-                  <Button
-                    isDisabled={isLoading}
-                    type="submit"
-                    aria-label="On Click"
-                    aria-required="true"
-                    width="full"
-                    className="btn-submit bg-primary-yellow"
-                  >
-                    Make Your Reservation
-                    {isLoading ? <Spinner ml="1rem" /> : null}
-                  </Button>
-                </VStack>
+                        Make Your Reservation
+                        {isLoading ? <Spinner ml="1rem" /> : null}
+                      </Button>
+                    </FormControl>
+                  </div>
+                </div>
               </form>
             </Box>
           </div>
