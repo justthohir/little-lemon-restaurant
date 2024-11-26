@@ -1,0 +1,30 @@
+name: Auto Deploy to Cloud VM
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to Cloud VM
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets .VPS_USER }}@${{ secrets.VPS_HOST }} '
+            cd /var/www/little-lemon-restaurant &&
+            git pull origin main &&
+            docker compose up -d --build
+          '
+      - name: Health Check
+        run: |
+          curl https://justthohir.in
