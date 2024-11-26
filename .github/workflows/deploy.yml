@@ -27,4 +27,4 @@ jobs:
           '
       - name: Health Check
         run: |
-          curl https://justthohir.in
+          curl https://justthohir.in/demo/web-restaurant/
