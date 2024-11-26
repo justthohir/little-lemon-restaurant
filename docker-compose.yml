@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: web-restaurant
+    ports:
+      - "3001:80"
+    restart: unless-stopped
